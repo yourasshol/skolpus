@@ -1,1 +1,339 @@
 
+﻿    <!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fuckplus</title>
+        <meta name="Keywords" content="skolplus,interaktiva,skrivtavlor,interaktiv,skrivtavla,smartboard,whiteboard,skola,undervisning,l&auml;rarmaterial,lektioner,&ouml;vningar,digital,dator,datorst&ouml;dd,undervisning,it,grundskola,grundskolan,noteboard,smartboard" />
+
+        <meta name="google-site-verification" content="F7h1w8KYemDaLT7Ba7JOd05h83aQOtwjtzH1twmfccY" />
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x57-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+        <link rel="shortcut icon" type="image/x-icon" href="https://skolplus.se/favicon.ico" />
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+        <style>
+
+            body {
+                font-family: 'Roboto', sans-serif;
+                font-size:16px;
+                padding:0;
+                margin:0;
+                background-color:#F3F3F3;;
+            }
+
+            .buticon_add {
+                background: url('https://skolplus.se/images/buticon_add.png') no-repeat;
+                float: left;
+                width: 19px;
+                height: 19px;
+                margin-right:7px;
+            }
+
+            .buticon_update {
+                background: url('https://skolplus.se/images/update-arrow.svg') no-repeat;
+                float: right;
+                width: 22px;
+                height: 22px;
+                margin-right:5px;
+                margin-left: 10px;
+            }
+
+            /* <a href="#" class="close-icon"></a> */
+            .close-icon{
+                display:inline-block;
+
+
+                width:20px;
+                height:20px;
+
+
+                background-image:url('https://skolplus.se/images/smallx.svg');
+                background-size:14px;
+                background-repeat:no-repeat;
+                background-position:center center;
+
+            }
+            .skolon-menu-button-dropdown{z-index:9999;}
+
+            .table {
+                display: table;
+            }
+            .table-row {
+                display: table-row;
+            }
+            .table-cell {
+                display: table-cell;
+            }
+            .no_javascript_box
+            {
+                text-align: center;
+                padding: 2%;
+                border: 3px solid lightpink;
+                background-color: #FFE5D4;
+                animation: color_pulse 2s infinite;
+            }
+            @keyframes color_pulse
+            {
+                50% {border-color: red;}
+            }
+
+            /* language */
+            body:not(.sv) :lang(sv),body:not(.en) :lang(en),body:not(.fi) :lang(fi),body:not(.no) :lang(no),body:not(.da) :lang(da)            {
+                display: none;
+            }
+            [lang=ar] {
+                direction:rtl;
+            }
+
+            .input-icons i
+            {
+                position: absolute;
+            }
+            .icon
+            {
+                margin: 8px;
+                margin-left: 200px;
+                width:21px;
+                height: 21px;
+                background: url('https://skolplus.se//images/closed_eye.png') no-repeat;
+                background-size: contain;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="https://skolplus.se/css.css?10">
+
+        <script>
+            SITE_URL='https://skolplus.se/';
+            SITEIMAGES_URL='https://skolplus.se/images/';
+			var user_langcode = 'sv';
+			
+            function topDiv(div_id){
+                var qdiv=document.getElementById(div_id);
+                document.body.appendChild(qdiv);
+                qdiv.style.display = 'block';
+            }
+            function showDiv(div_id){
+                var qdiv=document.getElementById(div_id);
+                qdiv.style.display = 'block';
+            }
+            function hideDiv(div_id){
+                var qdiv=document.getElementById(div_id);
+                qdiv.style.display = 'none';
+            }
+            function toggleDiv(div_id) {
+                var qdiv = document.getElementById(div_id);
+                qdiv.style.display = qdiv.style.display == "none" ? "block" : "none";
+            }
+            function show_login_form(){
+                if (navigator.cookieEnabled){
+                    var the_form = document.getElementById('login_form');
+                    the_form.style.visibility = 'visible';
+                    document.getElementById('login_username').focus();
+                }
+                else {
+                    alert('Denna webbsida behöver kakor (cookies), vänligen slå på kakor i din webbläsare!');
+                }
+                return false;
+            }
+
+
+        </script>
+        <script>
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29349058-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            function toggleFaEye(eye)
+            {
+                let x = eye.parentElement.getElementsByTagName('input')[0];
+
+                if (x.type === "password")
+                {
+                    x.type = "text";
+                    eye.style.backgroundImage = "url(https://skolplus.se//images/open_eye.png)";
+                }
+                else
+                {
+                    x.type = "password";
+                    eye.style.backgroundImage = "url(https://skolplus.se//images/closed_eye.png)";
+                }
+            }
+        </script>
+                <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XD5MDC5FZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-3XD5MDC5FZ');
+        </script>
+    </head>
+
+    <body class='sv'>
+    <div id='no_cookie_warning' style='text-align: center; padding: 2%; border: 3px solid lightpink; background-color: #FFE5D4;font-weight:bold;display:none;'>Denna webbsida behöver kakor (cookies), vänligen slå på kakor i din webbläsare!</div><script> if (!navigator.cookieEnabled){document.getElementById('no_cookie_warning').style.display='block'; } </script>
+    <noscript><div style='text-align: center; padding: 2%; border: 3px solid lightpink; background-color: #FFE5D4;font-weight:bold;'>Denna webbsida behöver Javascript, vänligen slå på Javascript i din webbläsare!</div></noscript>
+    <div id="total_wrap" style="min-height:100vh;position:relative;padding-bottom:150px;">
+        <div class='topbar no-print'>
+            <div class='topbarleft'>
+                                <a href='https://skolplus.se/'><img src="https://skolplus.se/images/logo5.png" style="width: 136px;margin-top:6px;" alt=""/></a></div>
+            <div class='topbarright'>
+                                <div class="table" style="margin-top:4px;">
+                    <div class="table-row">
+                        <div class="table-cell"><div style='margin-right:8px;'><img src='https://skolplus.se/images/user-icon.svg' style='width:14px;margin-right:6px;' alt='' onClick='window.location="https://skolplus.se/me"'/>Charles | </div>
+                            <div class="table-cell"><span style='color:#888;'>ELEVKONTO, Vittra Telefonplan</span></div>
+                        </div>
+                        <div class="table-row">
+                            <a href='https://skolplus.se/logout' onClick="return confirm('Vill du verkligen logga ut?');">Logga ut</a></div>
+                    </div>
+                </div>
+            </div>
+            <div style='clear:both'></div>
+        </div><!-- topbar -->
+        <div class='rocketmenu no-print'>
+            <div class='clearsides'>
+                <img src="https://skolplus.se/images/rocket_bottom.svg" style="height:62px;vertical-align:middle;margin-left:-210px;margin-top:-8px;margin-bottom:-6px;" alt="" />
+                                <a class="rocketbut rb_ma " style="margin-left:-57px;" href="https://skolplus.se/matteraketen">Matteraketen</a>
+                                    <a class="rocketbut rb_sv "  href="https://skolplus.se/svenskaraketen">Svenskaraketen</a>
+                                    <a class="rocketbut rb_glosor "  href="https://skolplus.se/engelskaraketen">Engelskaraketen</a>
+                
+
+                <img src="https://skolplus.se/images/rocket_top.svg" style="height:38px;vertical-align:middle;margin-top:-4px;" alt="" />
+            </div>
+        </div><!-- rocketmenu -->
+        <div class='subrocketmenu no-print'>
+            <div class='clearsides'>
+                                <a class="topmenubut tb_ma " href="matte.html">are you kidding me right now?</a>
+                                    <a class="topmenubut tb_sv " href="https://skolplus.se/svenska">Mer svenska</a>
+                                        <a class="topmenubut tb_sv " href="https://skolplus.se/bokstavstaget">Bokstavståget</a>
+                                    <a class="topmenubut tb_glosor "  href="https://skolplus.se/voc">Glosor</a>
+                                <a class="topmenubut tb_other " href="https://skolplus.se/ovriga_amnen">Blandade ämnen</a>
+                                    <a class="topmenubut tb_other "  href="https://skolplus.se/rorelse"><span style="background-color:black;padding:2px;color:white;font-size:12px;font-weight:bold;">PROVA!</span>&nbsp;Rörelseäventyret</a>
+                            </div>
+        </div><!-- topmenu1 -->
+        <style>
+    #frontpage_container {
+        position:relative;
+        min-height:580px;
+    }
+    #text_box{
+        position:absolute;
+        top:60px;left:30px;
+        width:380px;
+    }
+    #front_image{
+        position:absolute;
+        top:60px;right:30px;
+        width:520px;
+    }
+    .ellipse{
+        position:absolute;
+        top:325px;right:75px;
+        background-color: rgba(0,0,0,.1);
+        height: 70px;
+        width: 380px;
+        border-radius: 50%;
+    }
+    #balloons{
+        position:absolute;
+        bottom:30px;
+        left:-10px;
+        right:-10px;
+        text-align:center;
+        border:!px dashed red;
+    }
+    .balloon{
+        position:relative;
+        display:inline-block;
+        margin:0 4px;
+        border:4px solid black;
+        padding:14px;
+        border-radius:22px;
+        width:235px;
+        background-color:white;
+        font-size:16px;
+        vertical-align:bottom;
+        font-family: Georgia, serif;
+        font-weight:bold;
+        box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .balloon img{
+        position:absolute;
+        width:45px;
+        left:50px;
+        bottom:-48px;
+        
+
+    }
+
+</style>
+<div style="height:600px;background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 72%, rgba(230,230,230,1) 72%, rgba(230,230,230,0) 100%);">
+    <div class='bodycontainer clearsides' id="frontpage_container">
+            <div class="ellipse"></div>
+            <img src="https://skolplus.se/images/diggi_front.png" alt="" id="front_image" />
+            <div id="text_box">
+                <div style="font-weight:bold;font-size:32px;color:#7EB020;">Lärande med glädje!</div>
+                <div style="margin-top:8px;font-size:18px;">Skolplus är din resurs på webben med mängder av spel, övningar och utskriftsmaterial inom flera olika ämnen med fokus på förskoleklass upp till årskurs 6. Här hittar du pedagogiska läromedel som kombinerar lärande med lekens glädje, ger kunskap, stimulerar och ger eleverna lust att lära sig mer. Skolplus används i över 80% av Sveriges grundskolor.</div>
+            </div> 
+            <div id="balloons">
+                <div class="balloon" style="border-color:#6699FF;color:#2E56A6;">”Här har du en sannolik långtidskund. Har testat Skolplus och både mina elever och jag är lyriska.”<img src="https://skolplus.se/images/pointer_blue.svg" alt="" style="" /></div>
+                <div class="balloon" style="border-color:#F49806;color:#995800;margin-bottom:16px;">”Så mycket roligare det helt plötsligt blev att lära sig!”<img src="https://skolplus.se/images/pointer_orange.svg" alt="" style="" /></div>
+                <div class="balloon" style="border-color:#6699FF;color:#2E56A6;">”Jag har hittat övningar som passar alla de elever med särskilda behov jag arbetar med.”<img src="https://skolplus.se/images/pointer_blue.svg" alt="" style="" /></div>
+                <div class="balloon" style="border-color:#7CBF00;color:#157F00;margin-bottom:16px;">”Säger bara WOW, vilken guldgruva ni har skapat!”<img src="https://skolplus.se/images/pointer_green.svg" alt="" style="" /></div>        
+            </div>
+    </div>
+</div>        <div class='footer no-print' style="position:absolute;bottom:0;left:0;right:0;">
+            <div class='clearsides no-print' style='position:relative;color:white;font-weight:bold;'>
+                <div style="position:absolute;left:30px;top:20px;width:150px;">
+                    <a href='https://skolplus.se/about'>Om oss</a><br>
+                    <a href='https://skolplus.se/eula'>Användaravtal</a>
+                </div>
+                                    <div style="position:absolute;left:190px;top:20px;width:250px;padding-left:30px;min-height:100px;border-left:2px solid white;">
+                        <img src="https://skolplus.se/images/facebook_small.svg" style="width:22px;margin-right:14px;vertical-align: middle;" alt=""/><a href='https://www.facebook.com/Skolplus'>Följ oss på Facebook</a><br>
+                        <img src="https://skolplus.se/images/instagram_small.svg" style="width:22px;margin-right:14px;vertical-align: middle;" alt=""/><a href='https://www.instagram.com/skolplus/'>Följ oss på Instagram</a>
+                    </div>
+                                <div style="position:absolute;right:20px;top:90px;width:550px;font-weight:normal;text-align:right;font-size:12px;">
+                                        Copyright &copy; 2024 Skolplus AB, Sweden.
+                </div>
+                            </div>
+        </div> <!-- footer -->
+    </div> <!-- total_wrap -->
+        <div id="login_form" style="background-color:rgba(0, 0, 0, 0.5);position: fixed;z-index:1000;top:0px;left:0px;bottom:0px;right:0px;visibility:hidden">
+        <div style="background-color:white; width:450px;padding:10px;text-align:center;border-radius:12px;border:3px solid black;margin-left:auto;margin-right:auto;margin-top:100px">
+            <div class='mini' style='float:right'><a href='#'  onclick="document.getElementById('login_form').style.visibility = 'hidden';">STÄNG</a></div>
+            <div style='clear:both'></div>
+            <h1>Logga in här</h1>
+            <form method="post" action="https://skolplus.se/" style='padding:10px;border:2px solid #3672C3;border-radius:5px;width:280px;margin-left:auto;margin-right:auto;background-color:#DFE8F5;' class="submitForm"  >
+                <input name="logaction" type="hidden" value="login" />
+                <input style="width:220px;margin:5px;" type="text" placeholder="Användarnamn" name="login_username" id="login_username"/><br/>
+                <div class="input-icons">
+                    <i class="fa fa-user icon" id="eyes" onmousedown="toggleFaEye(this)"></i>
+                    <input style="width:220px;margin:5px;padding-right:30px;" type="password" placeholder="******" id="login_password" name="login_password" onKeyPress="if (event.keyCode==13) document.loginform.submit();"/>
+                </div>
+                <br>
+                <input name="login_remember" type="checkbox" id="login_remember" checked="checked" value='1'>
+                <label for="login_remember">Kom ihåg mig på denna dator</label>
+                <br/>
+                <input class='butn2' style='margin:8px' name="submit" type="submit" value="Logga in" /><br/>
+                <a href="https://skolplus.se/login?action=lost"><span class='mini'>Glömt dina inloggningsuppgifter?</span></a><br/>
+            </form>
+
+            <br/><br/>eller om du har konto via Skolon<br/>
+            <a href="https://skolplus.se/skolon"><img src="https://skolplus.se/images/skolon.png" style="width:185px;" alt="Skolon" /></a><br/>
+
+        </div>
+    </div>    </body>
+    </html>
+    
+
